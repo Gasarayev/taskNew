@@ -14,36 +14,45 @@
 // counter();
 // counter();
 
-function useState(value) {
-  var newValue = value;
-  
-  function state() {
-    return value;
-  }
+// function useState(value) {
+//   var newValue = value;
 
-  function setState(newValue) {
-    value = newValue;
-  }
+//   function state() {
+//     return value;
+//   }
 
-  return [state, setState];
-}
+//   function setState(newValue) {
+//     value = newValue;
+//   }
 
-var [someVar, setSomeVar] = useState(0);
+//   return [state, setState];
+// }
 
-setSomeVar();
-console.log(someVar());
+// var [someVar, setSomeVar] = useState(0);
 
-setSomeVar(1);
-console.log(someVar());
+// setSomeVar();
+// console.log(someVar());
 
-setSomeVar(6);
-console.log(someVar());
+// setSomeVar(1);
+// console.log(someVar());
 
-setSomeVar(8);
-console.log(someVar());
+// setSomeVar(6);
+// console.log(someVar());
 
-setSomeVar(9);
-console.log(someVar());
+// setSomeVar(8);
+// console.log(someVar());
+
+// setSomeVar(9);
+// console.log(someVar());
 
 // ---------------------------
-function addToBasket() {}
+
+let basket = [];
+
+function addToBasket(item) {
+  basket.push(item);
+  console.log(basket);
+}
+
+addToBasket('gasar');
+addToBasket('emil');
